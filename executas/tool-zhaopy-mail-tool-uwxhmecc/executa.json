@@ -1,8 +1,9 @@
+
 {
-  "tool_id": "tool-zhaopy-mail-agent-rd6b87r5",
-  "name": "tool-zhaopy-mail-agent-rd6b87r5",
+  "tool_id": "tool-zhaopy-mail-tool-uwxhmecc",
+  "name": "tool-zhaopy-mail-tool-uwxhmecc",
   "display_name": "Zhaopy Mail Agent RD6B87R5",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "type": "python",
   "enabled": true,
   "description": "Minimal Anna Executa skeleton for reading Gmail through local token files and DashScope or Anna sampling LLM.",

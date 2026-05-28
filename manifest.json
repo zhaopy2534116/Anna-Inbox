@@ -12,7 +12,7 @@
   ],
   "required_executas": [
     {
-      "tool_id": "tool-zhaopy-mail-agent-rd6b87r5",
+      "tool_id": "tool-zhaopy-mail-tool-uwxhmecc",
       "min_version": "0.1.0",
       "version": "latest"
     }
@@ -41,7 +41,7 @@
     ],
     "host_api": {
       "tools": [
-        "required:tool-zhaopy-mail-agent-rd6b87r5"
+        "required:tool-zhaopy-mail-tool-uwxhmecc"
       ],
       "chat": [
         "write_message"

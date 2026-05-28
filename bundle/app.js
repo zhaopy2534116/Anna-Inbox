@@ -1,6 +1,6 @@
 "use strict";
 
-const TOOL_ID = "tool-zhaopy-mail-agent-rd6b87r5";
+const TOOL_ID = "tool-zhaopy-mail-tool-uwxhmecc";
 const DEFAULT_MAILBOX = "hr@anna.partners";
 const DEFAULT_MODE = "default_secretary";
 const SCAN_INTERVAL_MS = 15 * 60 * 1000;

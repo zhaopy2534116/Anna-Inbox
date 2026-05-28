@@ -3,7 +3,7 @@ set -euo pipefail
 
 PORT="${PORT:-5180}"
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-EXECUTA_DIR="$SCRIPT_DIR/executas/tool-zhaopy-mail-agent-rd6b87r5"
+EXECUTA_DIR="$SCRIPT_DIR/executas/tool-zhaopy-mail-tool-uwxhmecc"
 VENV_DIR="${ANNA_MAIL_AGENT_VENV:-$HOME/.venvs/zhaopy-mail-agent-rd6b87r5}"
 
 export PATH="$HOME/.local/bin:$PATH"
@@ -15,7 +15,7 @@ if [ -f "$HOME/.anna-mail-agent.env" ]; then
   set +a
 fi
 
-EXECUTA_SPEC="dir=$EXECUTA_DIR,tool_id=tool-zhaopy-mail-agent-rd6b87r5,type=python,command=env UV_PROJECT_ENVIRONMENT=$VENV_DIR UV_LINK_MODE=copy uv --directory src run zhaopy-mail-agent"
+EXECUTA_SPEC="dir=$EXECUTA_DIR,tool_id=tool-zhaopy-mail-tool-uwxhmecc,type=python,command=env UV_PROJECT_ENVIRONMENT=$VENV_DIR UV_LINK_MODE=copy uv --directory src run zhaopy-mail-agent"
 
 cd "$SCRIPT_DIR"
 exec anna-app dev --port "$PORT" --executa "$EXECUTA_SPEC" "$@"

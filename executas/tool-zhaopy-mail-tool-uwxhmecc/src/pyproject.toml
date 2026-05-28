@@ -1,6 +1,6 @@
 [project]
 name = "zhaopy-anna-mail-agent"
-version = "1.1.0"
+version = "1.0.0"
 description = "Anna Executa mail agent."
 requires-python = ">=3.10"
 dependencies = []
