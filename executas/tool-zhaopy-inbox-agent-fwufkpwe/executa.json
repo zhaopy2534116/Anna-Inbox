@@ -3,7 +3,7 @@
   "name": "tool-zhaopy-inbox-agent-fwufkpwe",
   "display_name": "Zhaopy Mail Agent RD6B87R5",
   "version": "1.0.0",
-  "type": "python",
+  "type": "binary",
   "enabled": true,
   "description": "Minimal Anna Executa skeleton for reading Gmail through local token files and DashScope or Anna sampling LLM.",
   "host_capabilities": [
@@ -11,13 +11,8 @@
     "aps.kv"
   ],
   "command": [
-    "env",
-    "UV_LINK_MODE=copy",
-    "uv",
-    "--directory",
-    "src",
-    "run",
-    "zhaopy-mail-agent"
+    "python3",
+    "zhaopy_mail_agent/main.py"
   ],
   "protocol": {
     "type": "json-rpc-2.0",
