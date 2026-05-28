@@ -194,17 +194,6 @@ function loadScript(src) {
 async function connectRuntime() {
   if (annaClient) return { connected: true, client: annaClient };
   if (typeof window.AnnaAppRuntime === "undefined") {
-    try {
-      await loadScript("/static/anna-apps/_sdk/0.2.0/index.js");
-    } catch {
-      try {
-        await loadScript("/static/anna-apps/_sdk/0.1.0/index.js");
-      } catch {
-        return { connected: false, mode: "mock", error: "Anna runtime SDK is not available." };
-      }
-    }
-  }
-  if (typeof window.AnnaAppRuntime === "undefined") {
     return { connected: false, mode: "mock", error: "Anna runtime SDK is not available." };
   }
   annaClient = await window.AnnaAppRuntime.connect();

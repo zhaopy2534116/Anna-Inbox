@@ -6,7 +6,6 @@
   ],
   "host_capabilities": [
     "llm.sample",
-    "llm.complete",
     "aps.scope.user.read",
     "aps.scope.user.write"
   ],

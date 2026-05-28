@@ -8,7 +8,6 @@
   "description": "Minimal Anna Executa skeleton for reading Gmail through local token files and DashScope or Anna sampling LLM.",
   "host_capabilities": [
     "llm.sample",
-    "llm.complete",
     "aps.kv"
   ],
   "command": [
@@ -30,14 +29,14 @@
       "name": "GMAIL_ACCESS_TOKEN",
       "display_name": "Gmail Access Token",
       "description": "Optional Google OAuth access token. Local token files are used when platform injection is unavailable.",
-      "required": false,
+      "required": true,
       "sensitive": true
     },
     {
       "name": "GOOGLE_ACCESS_TOKEN",
       "display_name": "Google Access Token",
       "description": "Alternative Google OAuth access token name supported by Anna platform credential mapping.",
-      "required": false,
+      "required": true,
       "sensitive": true
     },
     {
