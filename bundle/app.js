@@ -135,7 +135,7 @@ const state = {
   minimized: false,
   resultFilter: "all",
   llmProvider: "anna-llm",
-  storageProvider: "local",
+  storageProvider: "aps",
   generatingDraft: false,
   draftDots: "",
   summarizingThread: false,
@@ -813,7 +813,7 @@ function renderBottomBar() {
       <p class="bar-copy">${state.loading ? "Connecting to Anna runtime..." : state.scanState?.last_scan_ts ? `Last scan ${escapeHtml(state.scanState.last_scan_ts)}` : "No completed scan in persistent storage yet."}</p>
     </div>
     <div class="bar-actions">
-      ${renderDebugProviderControls()}
+      ${""/* renderDebugProviderControls() — hidden for production, logic kept for debug */}
       <button class="soft-btn" data-action="open-scan-plan">Next Scan</button>
       <button class="soft-btn" data-action="go-ask">Ask</button>
       <button class="primary-btn" data-action="manual-scan" ${state.isScanning || !state.runtime.connected ? "disabled" : ""}>Scan now</button>
