@@ -11,7 +11,7 @@
   ],
   "required_executas": [
     {
-      "tool_id": "tool-zhaopy-inbox-agent-fwufkpwe",
+      "tool_id": "tool-zhaopy-inbox-tool-tcd7p8sx",
       "min_version": "0.1.0",
       "version": "latest"
     }
@@ -40,7 +40,7 @@
     ],
     "host_api": {
       "tools": [
-        "required:tool-zhaopy-inbox-agent-fwufkpwe"
+        "required:tool-zhaopy-inbox-tool-tcd7p8sx"
       ],
       "chat": [
         "write_message"
