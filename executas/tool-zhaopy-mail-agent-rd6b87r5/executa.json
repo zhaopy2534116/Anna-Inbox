@@ -6,8 +6,14 @@
   "type": "python",
   "enabled": true,
   "description": "Minimal Anna Executa skeleton for reading Gmail through local token files and DashScope or Anna sampling LLM.",
-  "host_capabilities": ["llm.sample", "llm.complete", "aps.kv"],
+  "host_capabilities": [
+    "llm.sample",
+    "llm.complete",
+    "aps.kv"
+  ],
   "command": [
+    "env",
+    "UV_LINK_MODE=copy",
     "uv",
     "--directory",
     "src",
