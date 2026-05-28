@@ -193,6 +193,11 @@ function loadScript(src) {
 
 async function connectRuntime() {
   if (annaClient) return { connected: true, client: annaClient };
+
+  // Anna platform injects the SDK asynchronously — poll briefly for it.
+  for (let retry = 0; retry < 50 && typeof window.AnnaAppRuntime === "undefined"; retry += 1) {
+    await sleep(200);
+  }
   if (typeof window.AnnaAppRuntime === "undefined") {
     return { connected: false, mode: "mock", error: "Anna runtime SDK is not available." };
   }
