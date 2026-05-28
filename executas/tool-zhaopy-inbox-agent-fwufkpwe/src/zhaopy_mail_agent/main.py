@@ -35,7 +35,7 @@ from executa_sdk import PROTOCOL_VERSION_V2, SamplingClient, SamplingError
 from executa_sdk.storage import StorageClient, FilesClient, StorageError, make_response_router
 
 JSONRPC_VERSION = "2.0"
-TOOL_ID = "tool-zhaopy-mail-tool-uwxhmecc"
+TOOL_ID = "tool-zhaopy-inbox-agent-fwufkpwe"
 VERSION = "0.1.0"
 BEIJING_TZ = timezone(timedelta(hours=8), name="Asia/Shanghai")
 STDOUT_LOCK = threading.Lock()
