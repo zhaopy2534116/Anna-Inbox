@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anna Inbox</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="desktop">
+    <div class="ambient-window" aria-hidden="true">
+      <div class="ambient-lines"><span></span><span></span><span></span></div>
+    </div>
+
+    <main class="app-shell" id="appShell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="anna-mark anna-avatar-face" id="annaAvatar" aria-label="Anna avatar" title="Anna">
+            <span class="face-eye is-left"></span>
+            <span class="face-eye is-right"></span>
+            <span class="face-mouth"></span>
+          </div>
+          <div>
+            <div class="brand-title">Anna Inbox</div>
+            <div class="brand-subtitle" id="brandSubtitle">Last scan 09:20 · Next scan in 3h</div>
+            <div class="connection-status" id="connectionStatus"></div>
+          </div>
+        </div>
+        <div class="top-actions">
+          <div class="top-segment" aria-label="Main view">
+            <button class="ghost-btn" data-action="go-brief" title="Today’s brief">Brief</button>
+            <button class="ghost-btn" data-action="go-ask" title="Run a custom scan">Ask</button>
+          </div>
+          <button class="icon-btn" data-action="open-sources" title="Sources" aria-label="Sources">S</button>
+          <button class="icon-btn" data-action="history" title="Briefing history" aria-label="Briefing history">H</button>
+          <button class="icon-btn" data-action="minimize" title="Minimize">−</button>
+        </div>
+      </header>
+
+      <section class="app-content" id="appContent"></section>
+      <footer class="bottom-bar" id="bottomBar"></footer>
+
+      <div class="drawer-overlay" id="drawerOverlay"></div>
+      <aside class="drawer" id="sourcesDrawer" aria-label="Sources drawer"></aside>
+      <aside class="drawer" id="originalDrawer" aria-label="Original message drawer"></aside>
+      <aside class="drawer" id="historyDrawer" aria-label="History drawer"></aside>
+      <aside class="drawer" id="scanPlanDrawer" aria-label="Scan plan drawer"></aside>
+      <div class="toast" id="toast"></div>
+    </main>
+
+    <button class="minimized-pill" id="minimizedPill">
+      <span class="mini-mark">A</span>
+      <span>Anna Inbox</span>
+    </button>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

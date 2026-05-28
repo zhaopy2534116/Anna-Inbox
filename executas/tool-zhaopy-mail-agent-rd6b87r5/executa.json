@@ -1,0 +1,53 @@
+{
+  "tool_id": "tool-zhaopy-mail-agent-rd6b87r5",
+  "name": "tool-zhaopy-mail-agent-rd6b87r5",
+  "display_name": "Zhaopy Mail Agent RD6B87R5",
+  "version": "0.1.0",
+  "type": "python",
+  "enabled": true,
+  "description": "Minimal Anna Executa skeleton for reading Gmail through local token files and DashScope or Anna sampling LLM.",
+  "host_capabilities": ["llm.sample", "llm.complete", "aps.kv"],
+  "command": [
+    "uv",
+    "--directory",
+    "src",
+    "run",
+    "zhaopy-mail-agent"
+  ],
+  "protocol": {
+    "type": "json-rpc-2.0",
+    "transport": "stdio",
+    "message_framing": "newline-delimited-json"
+  },
+  "credentials": [
+    {
+      "name": "GMAIL_ACCESS_TOKEN",
+      "display_name": "Gmail Access Token",
+      "description": "Optional Google OAuth access token. Local token files are used when platform injection is unavailable.",
+      "required": false,
+      "sensitive": true
+    },
+    {
+      "name": "GOOGLE_ACCESS_TOKEN",
+      "display_name": "Google Access Token",
+      "description": "Alternative Google OAuth access token name supported by Anna platform credential mapping.",
+      "required": false,
+      "sensitive": true
+    },
+    {
+      "name": "DASHSCOPE_API_KEY",
+      "display_name": "DashScope API Key",
+      "description": "DashScope API key used by the mail-agent LLM evaluator.",
+      "required": false,
+      "sensitive": true
+    },
+    {
+      "name": "DASHSCOPE_MODEL",
+      "display_name": "DashScope Model",
+      "description": "Optional DashScope model override. Defaults to qwen3-max.",
+      "required": false,
+      "sensitive": false
+    }
+  ],
+  "tools": "Provided by the describe JSON-RPC method at runtime."
+}

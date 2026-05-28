@@ -1,0 +1,20 @@
+[project]
+name = "zhaopy-anna-mail-agent"
+version = "1.1.0"
+description = "Anna Executa mail agent."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+zhaopy-mail-agent = "zhaopy_mail_agent.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+  "zhaopy_mail_agent",
+  "mail_agent",
+  "executa_sdk"
+]
